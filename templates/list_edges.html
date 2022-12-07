@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div>
+{% if error %}
+{{ error }}</div>
+
+
+{% endif %}
+
+    
+        <table class="table table-bordered ">
+            <tr >
+                <th>source</th>
+                <th>destination</th>
+                <th>#</th>
+            </tr>
+            {%if edges%}
+                {%for edge  in edges %}
+                <tr >
+                    <td>
+                    {{edge[0]}}        
+                    </td>
+
+                    <td>  
+                        {{edge[1]}}     
+
+                    </td>
+                    <td>
+                        <a href="/delete/{{edge[0]}}/{{edge[1]}}">delete this edge</a>
+                    </td>
+                    
+
+                </tr>
+                {%endfor%}
+            {%endif%}
+        
+            
+            
+
+        </table>
+        <a href="/edges">add new edge</a>
+    <form action="/prg" class="form" method="POST">
+        <div class="input-group mb-3 cl"> 
+            <input class="btn btn-primary" type="submit" value="Compute Page Rank for the current graph"/>
+        </div>
+    </form>
+
+
+            
+            
+       
+            
+    
+
+{% endblock %}

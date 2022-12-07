@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graph>
+
+  <nodes>  
+    <node>1</node>
+    <node>2</node>
+    <node>3</node>
+    <node>4</node>
+    <node>5</node>
+    <node>6</node>
+    <node>6</node>
+    <node>7</node>
+    <node>8</node>
+    <node>9</node>
+    <node>10</node>
+  </nodes>
+
+  <edges>
+      <edge source="2" destination="3" />
+      <edge source="3" destination="2" />
+      <edge source="4" destination="1" />
+      <edge source="4" destination="2" />
+      <edge source="5" destination="4" />
+      <edge source="5" destination="6" />
+      <edge source="5" destination="2" />
+      <edge source="6" destination="5" />
+      <edge source="6" destination="2" />
+      <edge source="7" destination="2" />
+      <edge source="7" destination="5" />
+      <edge source="8" destination="5" />
+      <edge source="8" destination="2" />
+      <edge source="9" destination="5" />
+      <edge source="9" destination="2" />
+      <edge source="10" destination="5" />
+      <edge source="11" destination="5" />
+  
+  </edges>
+
+    
+
+</graph>

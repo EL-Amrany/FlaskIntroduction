@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Home</title>
+
+{%endblock%}
+{% block body %}
+<header>Choose one from the following methods to Compute the page rank:
+</header>
+<br>
+<br>
+<div>
+
+{% if error %}
+{{ error }}</div>
+
+
+{% endif %}
+
+
+<div class="form"  >
+    <form action="" method="POST" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <table class="table table-striped-columns">
+
+            <tr>
+                <td>
+                <div class="input-group mb-3">
+                    {{form.adjacency(class="form-control")}}
+                    {{form.adjacency.label(class="input-group-text")}}
+                </div>
+                </td>
+
+                <td rowspan="3">
+                        
+                   <div class="input-group mb-3 cl" >  
+                    {{form.submit(class="btn btn-primary")}}
+                    </div>
+
+                </td>
+
+            </tr>
+            
+               
+            <tr> 
+                <td>
+                <div class="input-group mb-3">
+                    {{form.tp(class="form-control")}}
+                    {{form.tp.label(class="input-group-text")}}
+                </div>
+            </td>
+            </tr>
+            
+            
+            <tr>
+                <td>
+                <div class="input-group mb-3">
+                    {{form.xml(class="form-control")}}
+                    {{form.xml.label(class="input-group-text")}}
+                </div>
+                </td>
+
+    
+            </tr>
+        </table>
+    </form>
+</div>
+
+            <div class="cl">
+                <a href="/edges"> 
+                    Fill the graph                   
+                </a>
+            </div>
+            
+            
+       
+            
+    
+
+{% endblock %}

@@ -1,0 +1,33 @@
+body {
+    margin: 5px;
+    padding: 2cm;
+    font-family:sans-serif;
+
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cl{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.margin{
+    margin: 2px;
+    
+    font-family:sans-serif;    
+}
+
+.number{
+    
+    margin-right: 14cm;
+    margin-bottom: 1cm;
+}
+
+

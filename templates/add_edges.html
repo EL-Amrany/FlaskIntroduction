@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%block head%}
+<title>Edges Information</title>
+{%endblock%}
+{% block body %}
+<header>all you need is to Enter Edge's Source and destination and we'll compute the Page Rank for you :  </header>
+<br>
+<br>
+<div class="form"  >
+    <form action="/edges" method="POST" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+
+        <div class="number">
+            {{form.source.label(class="form-label")}}
+            {{form.source(class="form-control")}}
+            
+        </div>
+        <div class="number">
+            {{form.destination.label(class="form-label")}}
+            {{form.destination(class="form-control")}}
+            
+        </div>
+         
+            <div class="input-group mb-3 number"> 
+                {{form.submit(class="btn btn-primary")}}
+            </div>
+            
+                
+    </form>
+</div>
+
+{% endblock %}
